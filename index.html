@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Qur'an Search & Read</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="">
+
+  <header>
+    <h1>📖 Qur'an Search & Read App</h1>
+    <input type="text" id="searchInput" placeholder="Search Surah...">
+    <button class="search-btn" id="searchBtn">🔍 Search</button>
+    <div class="headerBtn">
+      <button>⭐All Bookmarks</button>
+    <button class="btn btn-sm btn-secondary">🌙 Night/Day Mode</button>
+    </div>
+  </header>
+  <main>
+    <aside id="surahList">
+      <h2>Surah List</h2>
+      <div id="loading"></div>
+      <!-- Surah List will load here -->
+    </aside>
+
+    <section id="content">
+      <h2 id="surahName" style="margin-left: 10px;">Select a Surah to Read</h2>
+       <div id="surahContainer" style="padding-left: 15px;">
+        <!-- Ayahs will display here -->
+        </div>
+    </section>
+  </main>
+  <!-- Toast -->
+  <div id="toast" class="toast"></div>
+  <!-- All Book Marked Ayahs will show here -->
+<div id="bookmarkModal" class="modal">
+  <div class="modal-content">
+    <span class="close-button" onclick="closeBookmarkModal()">✖</span>
+    <h2>📌 Bookmarked Ayahs</h2>
+    <div id="bookmarkList"></div>
+  </div>
+</div>
+<!-- Specific Ayah will be showed here -->
+<div id="ayahModal" class="modal">
+  <div class="modal-content">
+    <span class="close-button" id="close">✖</span>
+    <h2 id="modalSurahTitle">Surah Name - Ayah</h2>
+    <p id="modalAyahArabic" style="font-size: 24px; text-align: right; font-weight: bold;"></p>
+    <p id="modalAyahEnglish" style="margin-top: 10px;"></p>
+  </div>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.min.js"></script>
+<script src="api.js" type="module"></script>
+<script type="module" src="aside.js"></script>
+</body>
+</html>
