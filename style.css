@@ -32,6 +32,14 @@ body {
     background-color: #00897b;
     color: white;
   }
+  #toggleBtn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none; /* desktop এ লুকানো থাকবে */
+}
   .search-btn {
     padding: 5px 15px 6px 15px;
     background-color: white;
@@ -71,13 +79,17 @@ body {
     width: 100%;
   }
   
-  #surahList {
+  #surahList{
     width: 25%;
     /* background-color: #f2f2f2; */
     overflow-y: scroll;
     padding: 1rem;
   }
-  #content{
+   #surahList>button{
+    width: 45%;
+    text-align: left;
+  }
+   #content{
     width: 75%;
     flex: 1;
     padding: 1rem;
@@ -158,10 +170,7 @@ body {
     from {opacity: 0;}
     to {opacity: 1;}
   }
-  .surah.active {
-    background: #d1eaff;
-  }
-  @media (max-width: 768px) {
+ @media screen and (max-width: 768px) {
     .main-content {
       flex-direction: column;
     }
@@ -169,9 +178,28 @@ body {
     .card {
       flex: 1 1 100%;
     }
+    #toggleBtn{
+      display: block;
+    }
+    /* #surahList{
+      display: none;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    #surahList>button{
+      width: 50%;
+    } */
+    .toggle{
+      display: none;
+    }
+    #content{
+    width:100%;
+  }
   }
   
-  @media (max-width: 480px) {
+  @media screen and(max-width: 480px) {
     html {
       font-size: 14px;
     }

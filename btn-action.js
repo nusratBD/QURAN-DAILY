@@ -1,4 +1,5 @@
 import { allSurah } from "./api.js";
+//All Surah Button Click Event
 document.addEventListener("DOMContentLoaded",()=>{
     allSurah().then(datas=>{
     datas.forEach((data, index) => {
@@ -11,3 +12,9 @@ document.addEventListener("DOMContentLoaded",()=>{
     });
 })
 })
+//Toggle Button Action for Mobile View
+const surahList=document.getElementById("surahList");
+document.getElementById("toggleBtn").addEventListener("click",()=>{
+    surahList.classList.toggle('toggle');
+})
+

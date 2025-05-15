@@ -6,19 +6,20 @@
   <title>Qur'an Search & Read</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body class="">
+<body id="body">
 
   <header>
+     <button id="toggleBtn">☰</button>
     <h1>📖 Qur'an Search & Read App</h1>
     <input type="text" id="searchInput" placeholder="Search Surah...">
     <button class="search-btn" id="searchBtn">🔍 Search</button>
     <div class="headerBtn">
       <button>⭐All Bookmarks</button>
-    <button class="btn btn-sm btn-secondary">🌙 Night/Day Mode</button>
+    <button id="mode">🌙 Night/Day</button>
     </div>
   </header>
   <main>
-    <aside id="surahList">
+    <aside id="surahList" class="toggle">
       <h2>Surah List</h2>
       <div id="loading"></div>
       <!-- Surah List will load here -->
@@ -52,6 +53,7 @@
 <script src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.min.js"></script>
 <script src="api.js" type="module"></script>
 <script type="module" src="aside.js"></script>
-<script type="module" src="components.js"></script>
+<script type="module" src="btn-action.js"></script>
+<script src="mode.js"></script>
 </body>
 </html>
