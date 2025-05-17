@@ -16,11 +16,12 @@ document.addEventListener("DOMContentLoaded",()=>{
             await specificSurah(index+1).then(data=>{
                 localStorage.setItem("my-surah", JSON.stringify(data));
                 surahDetail(data);
-             })
+                })
         })
     });
 })
 })
+//BookMark
 //Toggle Button Action for Mobile View
 const surahList=document.getElementById("surahList");
 document.getElementById("toggleBtn").addEventListener("click",()=>{
