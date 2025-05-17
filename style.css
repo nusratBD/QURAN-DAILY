@@ -4,13 +4,15 @@ body {
     padding: 0;
     display: flex;
     flex-direction: column;
+
   }
   .mode{
     background-color: #525453;
     color: white;
   }
   header {
-    position: relative;
+    position: sticky;
+    top: 0;
     background-color: #00897b;
     color: white;
     padding: 1rem;

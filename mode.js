@@ -1,4 +1,4 @@
-//Changing Day & Night Mode
+//Loading Default Mode Before Clicking
 const body=document.getElementById("body");
 let getMode=localStorage.getItem("mode");
 document.addEventListener("DOMContentLoaded",()=>{
@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded",()=>{
     body.classList.remove("mode");
 }
 })
+//Mode Change when clicking on the button
 document.getElementById("mode").addEventListener("click",()=>{
     if(getMode=="night"){
         localStorage.setItem("mode", "day");
