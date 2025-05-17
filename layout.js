@@ -20,11 +20,9 @@ export const surahDetail = async (data) => {
         </div>
             `;
     })
-    console.log(data);
     const callback=(entries)=>{
         entries.forEach(entry=>{
             if(entry.isIntersecting){
-                console.log(entry.target.dataset.index);
                 localStorage.setItem(data.surahName, entry.target.dataset.index)
             }
         })
@@ -37,10 +35,7 @@ export const surahDetail = async (data) => {
     if(lastRead){
         const lastAyah=document.getElementById(data.surahName+lastRead);
         if(lastAyah){
-            lastAyah.scrollIntoView({
-                behavior:"instant",
-                block:"center"
-            })
+            lastAyah.scrollIntoView()
         }
     }
 }
