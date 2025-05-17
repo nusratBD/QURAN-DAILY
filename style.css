@@ -4,6 +4,7 @@ body {
     padding: 0;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 
   }
   .mode{
@@ -13,6 +14,7 @@ body {
   header {
     position: sticky;
     top: 0;
+    z-index: 1000;
     background-color: #00897b;
     color: white;
     padding: 1rem;
@@ -77,15 +79,18 @@ body {
   
   main {
     display: flex;
-    height: 100vh;
+    height: calc(100vh - 170px);
     width: 100%;
   }
-  
-  #surahList{
+  aside{
     width: 25%;
-    /* background-color: #f2f2f2; */
+  }
+  #surahList{
+    height: calc(100vh - 280px);
     overflow-y: scroll;
-    padding: 1rem;
+    /* background-color: #f2f2f2; */
+    padding-top: 0.5rem ;
+    padding-left: 1rem;
   }
    #surahList>button{
     width: 45%;
@@ -95,6 +100,9 @@ body {
     width: 75%;
     flex: 1;
     padding: 1rem;
+  }
+  #surahContainer{
+    height: calc(100vh - 280px);
     overflow-y: scroll;
   }
   .toast {
