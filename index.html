@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Qur'an Search & Read</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body id="body">
+
+  <header>
+    <h1>📖 Qur'an Search & Read App</h1>
+    <input type="text" id="searchInput" placeholder="Search Surah...">
+    <button class="search-btn" id="searchBtn">🔍 Search</button>
+    <div class="headerBtn">
+      <button id="all-book-mark">⭐All Bookmarks</button>
+    <button id="mode">🌙 Night/Day</button>
+    </div>
+  </header>
+  <main>
+    <aside  class="toggle">
+      <h2 style="padding-top: 20px; padding-left: 20px;">Surah List</h2>
+      <div id="loading"></div>
+      <!-- Surah List will load here -->
+       <div id="surahList"></div>
+    </aside>
+
+    <section id="content">
+      <h2 id="surahName" style="margin-left: 10px;" >Select a Surah to Read</h2>
+       <div id="surahContainer" style="padding-left: 15px; ">
+        <!-- Ayahs will display here -->
+        </div>
+    </section>
+  </main>
+  <!-- Toast -->
+  <div id="toast" class="toast"></div>
+  <!-- Common Model For Search, Bookmark, Audio, Tafsir  -->
+<div id="bookmarkModal" class="modal">
+  <div class="modal-content">
+    <span class="close-button" id="closeBookmarkModal">✖</span>
+    <div id="bookmarkList">
+      <h2 id="model-title">📌 Bookmarked Ayahs</h2>
+    </div>
+  </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.min.js"></script>
+<script type="module" src="api.js" ></script>
+<script type="module" src="aside.js"></script>
+<script src="mode.js"></script>
+<script type="module" src="layout.js"></script>
+<script type="module" src="main.js" ></script>
+<script type="module" src="localStorage.js"></script>
+<script type="module" src="search.js" ></script>
+<script type="module" src="book-mark.js" defer></script>
+<script type="module" src="btn-action.js" defer></script>
+</body>
+</html>
