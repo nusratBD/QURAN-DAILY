@@ -18,14 +18,13 @@
     </div>
   </header>
   <main>
-    <aside  class="toggle">
+    <aside >
       <h2 style="padding-top: 20px; padding-left: 20px;">Surah List</h2>
       <div id="loading"></div>
       <!-- Surah List will load here -->
        <div id="surahList"></div>
     </aside>
-
-    <section id="content">
+  <section id="content">
       <h2 id="surahName" style="margin-left: 10px;" >Select a Surah to Read</h2>
        <div id="surahContainer" style="padding-left: 15px; ">
         <!-- Ayahs will display here -->
@@ -44,14 +43,9 @@
   </div>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.min.js"></script>
-<script type="module" src="api.js" ></script>
-<script type="module" src="aside.js"></script>
-<script src="mode.js"></script>
-<script type="module" src="layout.js"></script>
-<script type="module" src="main.js" ></script>
-<script type="module" src="localStorage.js"></script>
-<script type="module" src="search.js" ></script>
-<script type="module" src="book-mark.js" defer></script>
-<script type="module" src="btn-action.js" defer></script>
+<script type="module" src="../JS/api/api.js"></script>
+<script type="module" src="../JS/aside/aside.js"></script>
+<script type="module" src="../JS/aside/surah-list.js"></script>
+<script type="module" src="../JS/localStorage/localStorage.js"></script>
 </body>
 </html>
