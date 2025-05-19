@@ -18,7 +18,7 @@ The button which was selected before loading, didn't scroll on the top after loa
 The target button that we are finding, doesn't create yet.
 
 ------------------------------------------------------------------------
-## ❌ Error 1: Directly chaining `.scrollIntoView()` during element selection
+## ❌ Error 2: Directly chaining `.scrollIntoView()` during element selection
 
 ### Code:
 ```js
