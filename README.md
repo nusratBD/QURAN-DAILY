@@ -1,5 +1,5 @@
 # 📖 Quran Daily
-Quran Daily is a simple web application that lists all Surahs (chapters) of the Quran and allows users to view detailed information by clicking on each Surah.
+Quran Daily is a simple web application that lists all Surahs (chapters) of the Quran and allows users to view detailed information by clicking on each Surah. And, also give opportunity to find specific ayah.
 -----------------------------------------------------------------------
 
 ## 🚀 Features
@@ -22,6 +22,7 @@ Quran Daily is a simple web application that lists all Surahs (chapters) of the 
 - ✅ JavaScript (Vanilla)
 - ✅ fuse.js
 - ✅ IntersectionObserver
+------------------------------------------------------------------------
 
 ## API 
 **Base URL:** `https://quranapi.pages.dev/api/`
@@ -37,11 +38,15 @@ fetch("https://quranapi.pages.dev/api/2.json")
 fetch("https://quranapi.pages.dev/api/surahNo/ayahNo.json")
 ### 🔍 Example 
 fetch("https://quranapi.pages.dev/api/2/176.json")
+------------------------------------------------------------------------
 
 
 ## How to Run
 Just open `index.html` in browser.
+----------------------------------------------------------------------
 
 ## Design Layout
+-----------------------------------------------------------------------
 
 ## Live Demo
+------------------------------------------------------------------------
