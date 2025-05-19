@@ -1,3 +1,3 @@
-export const readingSurah=(surahNo)=>{
-    localStorage.setItem("reading",surahNo);
+export const localStorageReadingSurah=(surah)=>{
+    localStorage.setItem("currently-reading",JSON.stringify(surah));
 }
