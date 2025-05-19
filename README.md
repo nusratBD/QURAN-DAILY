@@ -53,3 +53,5 @@ Just open `index.html` in browser.
 
 ## Live Demo
 ------------------------------------------------------------------------
+## 🛠 Developer Notes
+- [Common Errors & Fixes](./dev-notes/errors/)

@@ -1,4 +1,4 @@
-import { allSurahApi } from "../api/api.js";
+import { allSurahApi, specificSurahApi } from "../api/api.js";
 import { loadingStart, loadingStop } from "../common-layout/loading.js";
 import { localStorageReadingSurah } from "../localStorage/localStorage.js";
 import { activateClickedSurah, removeBtnActiveClass } from "./activate-button.js";
@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             document.getElementById(index+1).addEventListener("click",(e)=>{
                 removeBtnActiveClass();
                 activateClickedSurah(e.target);
-                localStorageReadingSurah(surah);
+                specificSurahApi(index+1).then(surah=>localStorageReadingSurah(surah))
                 })
         })
     })
