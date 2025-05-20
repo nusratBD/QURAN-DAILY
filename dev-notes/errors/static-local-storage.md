@@ -31,4 +31,4 @@ document.getElementById("mode").addEventListener("click", () => {
 ```
 This way, the logic always works with the most recent mode, and the UI updates properly on every click.
 
-[Main Code](./static-local-storage.md)
+[Main Code](../../JS/mode/mode.js)
