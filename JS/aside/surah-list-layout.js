@@ -1,7 +1,6 @@
-import { getReadingSurah } from "../localStorage/localStorage.js";
-
+import { getlocalStorage} from "../localStorage/localStorage.js";
 const surahListDiv = document.getElementById("surahList");
-const readingSurah=getReadingSurah();
+const readingSurah=getlocalStorage("currently-reading");
 
 export const showSurahList=(surah,index)=>{
     //If the Surah exist in the localStorage, the button will be activated automatically
