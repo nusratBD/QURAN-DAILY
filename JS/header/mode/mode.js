@@ -1,4 +1,4 @@
-import { getSingleStorage, setSingleStorage } from "../localStorage/localStorage.js";
+import { getSingleStorage, setSingleStorage } from "../../localStorage/localStorage.js";
 const body = document.getElementById("body");
 const getPreviousMode = getSingleStorage("mode");
 

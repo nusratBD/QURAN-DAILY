@@ -1,6 +1,18 @@
-## Aside Action Summary
+# Aside Action Summary
+asie action এ আসলে ২টা কাজঃ
+- ১টা কাজ site লোডের সময়(surah list দেখানো)
+- বাকি ৩টা কাজ loading শেষ হওয়ার পর।
+[১.specific কোন সূরাতে ক্লিক করার পর সেই বাটনটার ডিজাইন ম্যানেজ করা। 
+ ২.মেইনে সে সূরার ডিটেইলটা ইমিডিয়েটলি দেখানো। 
+ ৩.ক্লিক করা সূরার ডিটেইল localStorage এ সেভ করে রাখা। যাতে পরবর্তী লোডিং এর সময় main এ আগে select করা সেই সূরাটা দেখানো যায়।
+]
+ 
+ ## লোডিং শেষ হওয়ার পরের কাজ
+ ### বাটনের ডিজাইন ম্যানেজ করা
 - যখন কোন সূরাতে(বাটনে) ক্লিক হবে, প্রথমে UI তে থাকা সবগুলো বাটনের active class remove করা হবে। (querySelectorAll দিয়ে then forEach চালিয়ে প্রতিটু বাটনের active class remove করা হবে)।
 
 - সবগুলো বাটনের active class remove করার পর, ক্লিক করা বাটনে(e.target) এ active class add করা হবে।
 
-- onload এ যদি currently reading surah থাকে, তাহলে সে সূরাটি(বাটন) এ active class add হবে, আর বাটনটি UI এর টপে অটো স্ক্রল হবে(scrollIntoView)
+### লোডিং এর সময়ের কাজ
+- onload এ যদি currently reading surah (মানে আগে থেকে কোন সূরাতে ক্লিক করা হয়, অর্থাৎ সেটি লোকাল স্টোরেজে সেভ হয়ে থাকে) থাকে, তাহলে সে সূরাটিতে (বাটনে)   active class add হবে, আর বাটনটি UI এর টপে অটো স্ক্রল হবে(scrollIntoView)
+ 
