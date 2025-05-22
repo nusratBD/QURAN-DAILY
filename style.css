@@ -105,6 +105,9 @@ body {
     height: calc(100vh - 280px);
     overflow-y: scroll;
   }
+  .ayah.active {
+  border-left: 4px solid #ffcc00; /* Bright golden indicator */
+}
   .toast {
     visibility: hidden;
     min-width: 200px;

@@ -8,7 +8,7 @@ export const surahLayout=(data)=>{
   surahName.textContent = `${data.surahNo}. ${data.surahName}`;
     data.arabic1.forEach((arabic, index) => {
         surahContainer.innerHTML += `
-        <div class="ayah" data-index="${data.surahName}${index-1}" id="${data.surahName}${index+1}">
+        <div class="ayah" id="${data.surahName}${index+1}" data-index="${data.surahName}${index-1}">
             <p><strong>${index + 1}.</strong> ${arabic}</p>
   <p>${data.english[index]}</p>
  <button id="${data.surahName}-${index + 1}">⭐ Bookmark</button>
@@ -20,8 +20,11 @@ export const surahLayout=(data)=>{
     const callback=(entris)=>{
         entris.forEach(entry=>{
             if(entry.isIntersecting){
+                document.querySelectorAll(".ayah").forEach(ayah=>ayah.classList.remove("active"));
                 setSingleStorage("last-read", entry.target.dataset.index);
             }
+            document.getElementById(entry.target.id).classList.add("active");
+            entry.target.classList.add("active");
     })
     }
     const option={threshold:1.0};
@@ -32,6 +35,7 @@ export const surahLayout=(data)=>{
     if(lastRead){
         const lastAyah=document.getElementById(lastRead);
         if(lastAyah){
+            lastAyah.classList.add("active");
             lastAyah.scrollIntoView();
         }
     }
